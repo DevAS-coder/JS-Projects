@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+<style>
+    @font-face {
+            font-family: 'MyFont';
+            src: url('PlayRegular.ttf') format('truetype'); 
+        }
+
+    body{
+        font-family: 'MyFont', sans-serif;
+    }
+
+    .main-container{
+        width: 800px;
+        height: 550px;
+        position: fixed;
+        inset: 0px;
+        margin: auto;
+        border: 1px solid black;
+        display: flex;
+    }
+
+    .popup{
+        width: 300px;
+        height: 150px;
+        position: fixed;
+        inset: 0px;
+        margin: auto;
+        border-radius: 20px;
+        background-color: white;
+        border: 1px solid black;
+        padding: 15px;
+        z-index: 999;
+        display: none;
+    }
+
+    
+    .subdivs{
+        height: 550px;
+        /* border-radius: 20px; */
+        width: 225px;
+        display: flexbox;
+        /* justify-content: center; */
+        align-items: center;
+        text-align: center;
+        border: 1px solid black;
+        
+    }
+    
+    .addtask{
+        border: 1px solid black;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .addtask:hover{
+        background-color: rgb(217, 217, 217);
+    }
+    
+    .task{
+        width: 150px;
+        height: 30px;
+        border-radius: 50px;
+        background-color: rgb(255, 153, 0);
+        margin: auto;
+        padding: 5px;
+        margin-top: 10px;
+        cursor: grab;
+    }
+
+</style>
+<body>
+    <div id="popBg" style="width: 98%;height: 95%;z-index: 99;position: absolute;display: none;">
+        <div class="popup" id="popup">
+            <h4 style="margin-top: 0px;">New Task</h4>
+            <hr>
+            Task: <input type="text" id="taskinp">
+            <br><br>
+            <button id="cnclbtn" style="background-color: red;color: white;padding-left: 10px;padding-right: 10px;">Cancel</button><button style="background-color: green;color: white;padding-left: 20px;padding-right: 20px;" id="ok">OK</button>
+        </div>
+    </div>
+    <div class="main-container" id="main">
+        <div class="subdivs" id="add">
+            <h3>No Status</h3>
+            <button id="addtaskbtn" class="addtask"><span style="font-size: 15px;">Add Task </span><span class="material-symbols-outlined" style="position: relative;top: 3px;font-size: larger;">add_circle</span></button>
+        </div>
+        <div class="subdivs" ondrop="dropHandler(event)" ondragover="dragover(event)" id="notdone">
+            <h3>Not Done</h3>
+
+        </div>
+        <div class="subdivs" ondrop="dropHandler(event)" ondragover="dragover(event)" id="inprog">
+            <h3>In Progress</h3>
+
+        </div>
+        <div class="subdivs" ondrop="dropHandler(event)" ondragover="dragover(event)" id="done">
+            <h3>Done</h3>
+
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

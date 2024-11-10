@@ -1,0 +1,105 @@
+body{
+    background-color: #740938;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "prompt", sans-serif;
+    
+}
+
+.container{
+    background-color: #DE7C7D;
+    width: 450px;
+    height: 600px;
+    border-radius: 50px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 50px 0px #ff789a;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.cover{
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 50px;
+    max-width: 270px;
+    top: 40px;
+    
+}
+
+.prBar{
+    position: absolute;
+    width: 360px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #af173f4c;
+    top: 450px;
+    cursor: pointer;
+}
+
+.minutes{
+    position: absolute;
+    width: 360px;
+    top: 450px;
+}
+
+.currentTime{
+    font-size: 20px;
+    position: absolute;
+    top: -30px;
+}
+
+.allTime{
+    font-size: 20px;
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+
+.prFill{
+    width: 0%;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #AF1740;
+    top: 380px;
+}
+
+.infos{
+    position: absolute;
+    top: 330px;
+    text-align: center;
+}
+
+.songname{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.singer{
+    font-size: 20px;
+    margin-top: -60px;
+}
+
+
+.controls{
+    width: 240px;
+    position: absolute;
+    top: 490px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.backsong{
+    width: 40px;
+    cursor: pointer;
+}
+.playsong{
+    width: 65px;
+    cursor: pointer;
+}
+.nextsong{
+    width: 39px;
+    cursor: pointer;
+}
